@@ -1,0 +1,49 @@
+GET http://localhost:4000/api/exercises
+
+###
+
+GET http://localhost:4000/api/exercises/lunge
+
+###
+
+GET http://localhost:4000/api/exercises/lunge?level=23
+
+###
+
+GET http://localhost:4000/api/exercises/bodypart?muscles=arms_legs&level=123
+
+
+###
+
+POST http://localhost:4000/api/exercises/
+content-type: application/json
+
+{
+    "exercise": {
+        "name": "3-point row",
+        "muscles": "upper-back",
+        "description": "it's a 3-point row",
+        "level": 1,
+        "video": "XYnvDDMgcCQ"
+    }
+}
+
+###
+
+PUT http://localhost:4000/api/exercises/11
+content-type: application/json
+
+{
+    "exercise": {
+        "id": 11,
+        "name": "Even Better Butss!",
+        "muscles": "Mega sweet glutes",
+        "description": "Glutesville 2",
+        "level": 3,
+        "video": "Butt-tastic"
+    }
+}
+
+###
+
+GET http://localhost:4000/api/exercises/bodypart?muscles=legs&level=123
